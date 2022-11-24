@@ -1,0 +1,32 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.info-panel {
+    @include card;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.row {
+    background-color: $light-grey;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+}
+
+.label {
+    display: block;
+    color: $text-color-light;
+    font-size: 12px;
+}
+
+.value {
+    color: $text-color-dark;
+    font-size: 16px;
+    font-weight: bold;
+}
