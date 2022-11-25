@@ -1,9 +1,9 @@
 export type Resource = {
-    id: Number,
-    nickname: String,
+    id: number,
+    nickname: string,
     type: ResourceType,
-    maxOutputKw: Number,
-    percentOutput: Number,
+    max_output: number,
+    percent_output: number,
     online: Boolean,
 }
 
@@ -14,4 +14,5 @@ export enum ResourceType {
     OIL = "OIL",
     NUCLEAR = "NUCLEAR",
     COAL = "COAL",
+    HYDROELECTRIC = "HYDROELECTRIC"
 }
