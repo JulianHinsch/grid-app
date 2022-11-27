@@ -26,4 +26,4 @@ with app.app_context():
         import seed_db
         seed_db.seed()
 
-import routes.resource_routes as resource_routes
+import routes.resource_routes

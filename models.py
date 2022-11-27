@@ -11,4 +11,3 @@ class Resource(db.Model, SerializerMixin):
 
     def __repr__(self):
         return f'<Resource {self.nickname}>'
-
