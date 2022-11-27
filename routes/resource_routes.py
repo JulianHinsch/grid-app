@@ -22,24 +22,23 @@ def create_resource():
     return "", 201
 
 @app.patch("/api/resources/<int:id>")
-def update_resource():
+def update_resource(id):
     resource = Resource.query.get_or_404(id)
     request_data = request.get_json()
 
     # these are the only fields that can be updated in the UI
-    if request_data["online"]:
-        resource["online"] = request_data["online"]
+    if "online" in request_data:
+        resource.online = request_data["online"]
 
-    if request_data["percent_output"]:
-        resource["percent_output"] = request_data["percent_output"]
+    if "percent_output" in request_data:
+        resource.percent_output = request_data["percent_output"]
 
     db.session.add(resource)
     db.session.commit()
     return "", 200
 
-
-@app.delete("/api/resource/<int:id>")
-def delete_resource():
+@app.delete("/api/resources/<int:id>")
+def delete_resource(id):
     resource = Resource.query.get_or_404(id)
     db.session.delete(resource)
     db.session.commit()
