@@ -2,31 +2,28 @@
 @import '../../styles/variables.scss';
 
 .info-panel {
-    @include card;
+    grid-area: footer;
     display: flex;
     flex-direction: column;
 }
 
-.heading {
-    margin-top: 0;
-    margin-bottom: 1em;
-}
-
-.row {
-    background-color: $light-grey;
+.info {
     padding: 1em;
-    margin-bottom: 1em;
     border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
 }
 
-.label {
-    display: block;
-    color: $text-color-light;
-    font-size: 12px;
+.column {
+    flex-basis: 50%;
 }
 
 .value {
-    color: $text-color-dark;
+    display: block;
     font-size: 16px;
     font-weight: bold;
+
+    &:not(:last-child) {
+        margin-bottom: 1em;
+    }
 }

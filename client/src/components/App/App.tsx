@@ -1,4 +1,4 @@
-import { Alert, CircularProgress } from '@mui/material';
+import { Alert, Box, CircularProgress } from '@mui/material';
 
 import { useGetAllResourcesQuery } from '../../services/resource';
 
@@ -12,20 +12,20 @@ function App() {
   const { data, error, isLoading } = useGetAllResourcesQuery('');
 
   return (
-    <div className={styles.app}>
-      <div className={styles.header}>
+    <Box className={styles.app}>
+      <Box className={styles.header}>
         <h1>Grid Manager</h1>
-      </div>
+      </Box>
       {isLoading && <CircularProgress />}
       {error && <Alert variant="filled" severity='error'>Oops! Something went wrong.</Alert>}
       {data && (
-        <div className={styles.dashboard}>
+        <Box className={styles.dashboard}>
           <ResourceList resources={data}/>
           <PieChartContainer resources={data}/>
           <InfoPanel resources={data}/>
-        </div>
+        </Box>
       )}
-    </div>
+    </Box>
   );
 }
 
