@@ -3,7 +3,9 @@ import { Provider } from 'react-redux';
 import { setupStore } from './store';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
-import './index.scss';
+import './styles/index.scss';
+
+import CssBaseline from "@mui/material/CssBaseline";
 
 const store = setupStore();
 
@@ -12,6 +14,7 @@ const root = createRoot(container);
 
 root.render(
   <Provider store={store}>
+    <CssBaseline />
     <App />
   </Provider>
 );
