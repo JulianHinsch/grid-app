@@ -1,0 +1,23 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.resource-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.output {
+    font-weight: bold;
+    background-color: $color-light-grey;
+    border-radius: 0.5em;
+    padding: 1em 2em 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
