@@ -12,7 +12,7 @@ def get_env_variable(name):
         message = "Expected environment variable '{}' not set.".format(name)
         raise Exception(message)
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./client/build', static_url_path='/')
 
 DB_URL = get_env_variable("DB_URL")
 
@@ -25,5 +25,9 @@ with app.app_context():
     if get_env_variable("ENV") == "development":
         import seed_db
         seed_db.seed()
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 import routes.resource_routes
