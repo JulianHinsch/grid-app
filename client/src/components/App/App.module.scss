@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-light-grey;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    height: 4em;
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+
+    > h1 {
+        margin: 0;
+    }
+}
+
+.dashboard {
+    height: calc(100vh - 4em);
+    width: 100%;
+    max-width: 1100px;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+        "sidebar chart"
+        "sidebar footer";
+    column-gap: 2em;
+    row-gap: 2em;
+}
