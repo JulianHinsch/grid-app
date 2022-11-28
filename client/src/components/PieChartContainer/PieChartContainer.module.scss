@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.pie-chart-container {
+    position: relative;
+    min-height: 0;
+    grid-area: chart;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
