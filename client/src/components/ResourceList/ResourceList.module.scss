@@ -1,4 +1,17 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
 .resource-list {
+    grid-area: sidebar;
+}
+
+.header {
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.heading {
+    margin: 0;
 }
