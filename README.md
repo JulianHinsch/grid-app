@@ -2,13 +2,26 @@
 
 This application is a simplified grid management system.
 
-Grid managers can register an energy resource (Wind Turbine, Hydroelectric Facility, Solar Facility, Gas Plant, Coal Plant, or Nuclear Plant) and specify the maximum number of MW this facility can produce.
+Grid managers can register an energy resource (Wind, Hydroelectric, Solar, Gas, Coal, or Nuclear) and specify the maximum number of kW this facility can produce.
 
 Once the resource is created, the manager can toggle whether the facility is online or offline, and the percentage of maximum wattage the facility is producing.
 
-The grid manager can also specify the peak demand the grid is meant to cover, and the percentage of peak demand that is expected.
 
-The app will indicate whether or not this is being met.
+The app lists max output, current output, max carbon neutral output, and current carbon neutral output, and displays a pie chart of this data broken down by resource.
+
+## Stack
+
+### Client:
+React
+Redux (RTK-Query)
+Typescript
+SCSS
+MUI
+
+### Server:
+Flask
+SqlAlchemy
+Postgres
 
 ## Running the Flask Server
 
@@ -51,9 +64,7 @@ npm start
 
 ## Running client-side tests
 
-```
-cd client && npm test
-```
+TODO
 
 ## Running server-side tests
 
@@ -67,18 +78,3 @@ npm run build
 ```
 
 TODO
-
-
-
-
-Stack:
-
-React
-Redux
-Typescript
-SCSS
-MUI
-
-Flask
-SqlAlchemy
-Postgres
