@@ -48,7 +48,7 @@ function InfoPanel(props: InfoPanelProps) {
                 </Typography>
                 <Typography className={styles.value}>
                   {getCarbonNeutralOutput(props.resources)} kW
-              </Typography>
+                </Typography>
                 <Typography sx={{ fontSize: '14px', color: 'text.secondary' }}>
                   Max Carbon Neutral Output
                 </Typography>
