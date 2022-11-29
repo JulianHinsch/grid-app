@@ -1,0 +1,12 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "jhinsch799/grid-app",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "ContainerPort": "5000"
+      }
+    ]
+}
