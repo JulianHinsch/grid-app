@@ -70,11 +70,28 @@ TODO
 
 TODO
 
-## Deploying
+## Building with Docker
 
-1. Build the client
-```
-npm run build
-```
+1. Build and tag the image
+`docker build -t grid-app .`
+2. You can run the image locally with
+`docker run --env-file .env -p 5000:5000 grid-app`
+(note port 5000 is used by Airplay on some macs, if so try 5001:5000)
+
+# Deploying with AWS Elastic Beanstalk
+
+1. Install the eb cli
+2. Initialize the project: Navigate to the root directory and run `eb init -p docker grid-app`
+3. Test it out by running `eb local run --port 5000` - You should see a database error since we haven't configured postgres
+4. Create the environment - `eb create grid-app`
+5. View the environment in your browser - `eb open`
+6. Build and push the image to docker hub
+`docker build -t <docker-id>/grid-app:latest .`
+`docker push <docker-id>/grid-app:latest`
+
+Finally, set the DB_URL environment variable to a valid RDS url in the EB console and make sure the RDS instance is configured to allow connection from to the app's associated EC2 instance.
 
 TODO
+
+- Write client side tests
+- Write server side tests
