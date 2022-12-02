@@ -1,5 +1,7 @@
 # Grid App
 
+![grid-app screenshot](https://user-images.githubusercontent.com/24980176/205345373-d2a12b4a-dada-4998-90f7-1af0601c854f.png)
+
 This application is a simplified grid management system.
 
 Grid managers can register an energy resource (Wind, Hydroelectric, Solar, Gas, Coal, or Nuclear) and specify the maximum number of kW this facility can produce.
