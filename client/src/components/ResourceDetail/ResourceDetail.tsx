@@ -26,7 +26,7 @@ interface ResourceDetailProps {
 }
 
 function ResourceDetail(props: ResourceDetailProps) {
-  const [currentOutputPercent, setCurrentOutputPercent] = useState(props.resource.percent_output)
+  const [ currentOutputPercent, setCurrentOutputPercent ] = useState(props.resource.percent_output)
   const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false);
   const [ deleteResource, { isLoading: isDeleting } ] = useDeleteResourceMutation();
   const [ updateResource ] = useUpdateResourceMutation();
