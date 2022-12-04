@@ -3,6 +3,7 @@ FROM node:16-alpine as node-build
 WORKDIR /client
 ENV PATH /client/node_modules/.bin:$PATH
 COPY ./client/package.json ./
+COPY ./client/package-lock.json ./
 COPY ./client/tsconfig.json ./
 COPY ./client/src ./src
 COPY ./client/public ./public
