@@ -11,7 +11,7 @@ RUN npm install
 RUN npm run build
 
 # Build step #2: build the API with the client as static files
-FROM python:3.8-alpine AS python-build
+FROM python:3.8-alpine
 WORKDIR /app
 COPY --from=node-build ./client/build ./client/build
 
