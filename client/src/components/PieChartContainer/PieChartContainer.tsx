@@ -23,7 +23,12 @@ function PieChartContainer(props: PieChartContainerProps) {
   ));
 
   return (
-    <Paper className={styles['pie-chart-container']} data-tip="" data-for="chart">
+    <Paper
+      className={styles['pie-chart-container']}
+      data-tip=""
+      data-for="chart"
+      data-testid="pie-chart-container"
+    >
       <ReactTooltip
         id="chart"
         getContent={() => {
