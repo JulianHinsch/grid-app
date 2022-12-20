@@ -32,13 +32,13 @@ function InfoPanel(props: InfoPanelProps) {
                 <Typography sx={{ fontSize: '14px', color: 'text.secondary' }}>
                   Current Output
                 </Typography>
-                <Typography className={styles.value}>
+                <Typography className={styles.value} data-testid="output">
                   {getCurrentTotalOutput(props.resources)} kW
                 </Typography>
                 <Typography sx={{ fontSize: '14px', color: 'text.secondary' }}>
                   Max Output
                 </Typography>
-                <Typography className={styles.value}>
+                <Typography className={styles.value} data-testid="max-output">
                   {getMaxTotalOutput(props.resources)} kW
               </Typography>
             </Box>
@@ -46,13 +46,13 @@ function InfoPanel(props: InfoPanelProps) {
                 <Typography sx={{ fontSize: '14px', color: 'text.secondary' }}>
                   Current Carbon Neutral Output
                 </Typography>
-                <Typography className={styles.value}>
+                <Typography className={styles.value} data-testid="carbon-neutral-output">
                   {getCarbonNeutralOutput(props.resources)} kW
                 </Typography>
                 <Typography sx={{ fontSize: '14px', color: 'text.secondary' }}>
                   Max Carbon Neutral Output
                 </Typography>
-                <Typography className={styles.value}>
+                <Typography className={styles.value} data-testid="max-carbon-neutral-output">
                   {getMaxCarbonNeutralOutput(props.resources)} kW</Typography>
             </Box>
         </Paper>
