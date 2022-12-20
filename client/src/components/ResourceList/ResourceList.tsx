@@ -40,7 +40,8 @@ function ResourceList(props: ResourceListProps) {
                     variant="contained"
                     disableElevation
                     onClick={handleNewResourceClick}
-                    sx={{textTransform: "none"}}>
+                    sx={{textTransform: "none"}}
+                    data-testid="new-resource-button">
                         New Resource
                 </Button>
             </Box>
@@ -51,6 +52,7 @@ function ResourceList(props: ResourceListProps) {
                 <Accordion key={idx}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
+                        data-testid={`resource-summary-${resource.id}`}
                     >
                         <Typography sx={{ width: '33%', flexShrink: 0, fontWeight: 'bold '}}>
                             {resource.nickname}
