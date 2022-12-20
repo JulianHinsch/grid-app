@@ -19,9 +19,9 @@ afterEach(() => {
 it('should render correct totals based on resources prop', () => {
     const exampleResourcesProp = [
         {nickname: 'Example Resource 1', type: 'SOLAR', percent_output: 100, max_output: 40, online: true, id: 1},
-        {nickname: 'Example Resource 2', type: 'WIND', percent_output: 50, max_output: 80, online: true, id: 1},
-        {nickname: 'Example Resource 3', type: 'COAL', percent_output: 100, max_output: 100, online: true, id: 1},
-        {nickname: 'Example Resource 4', type: 'GAS', percent_output: 50, max_output: 80, online: true, id: 1}
+        {nickname: 'Example Resource 2', type: 'WIND', percent_output: 50, max_output: 80, online: true, id: 2},
+        {nickname: 'Example Resource 3', type: 'COAL', percent_output: 100, max_output: 100, online: true, id: 3},
+        {nickname: 'Example Resource 4', type: 'GAS', percent_output: 50, max_output: 80, online: true, id: 4}
     ];
 
     render(
