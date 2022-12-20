@@ -66,7 +66,10 @@ npm start
 
 ## Running client-side tests
 
-TODO
+```
+cd client
+npm run test
+```
 
 ## Running server-side tests
 
@@ -80,7 +83,7 @@ TODO
 `docker run -p 5000:5000 grid-app`
 (note port 5000 is used by Airplay on some macs, if so try 5001:5000)
 
-# Deploying with AWS Elastic Beanstalk and AWS RDS
+## Deploying with AWS Elastic Beanstalk and AWS RDS
 
 1. Install the eb cli
 2. Initialize the project: Navigate to the root directory and run `eb init -p docker grid-app`
@@ -93,7 +96,19 @@ TODO
 8. Create a Postgres instance in RDS and make sure it's configured to allow connection from to the app's associated EC2 instance.
 9. Run `eb deploy` every time you wish to deploy a new version of the app
 
+## Troubleshooting
+
+If `psycopg2` does not install on your M1 mac / virtual environment:
+
+Try `brew install openssl` and linking it when you install psycopg2 manually:
+
+```
+export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
+pip install psycopg2
+```
+
 TODO
 
-- Write client side tests
+- Finish client side tests
 - Write server side tests
