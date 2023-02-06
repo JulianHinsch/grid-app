@@ -71,10 +71,6 @@ cd client
 npm run test
 ```
 
-## Running server-side tests
-
-TODO
-
 ## Building with Docker
 
 1. Build and tag the image
