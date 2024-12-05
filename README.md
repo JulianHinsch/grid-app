@@ -103,8 +103,3 @@ export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
 pip install psycopg2
 ```
-
-TODO
-
-- Finish client side tests
-- Write server side tests
